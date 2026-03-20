@@ -1336,16 +1336,23 @@ let savedUser = JSON.parse(localStorage.getItem('anitrack_user') || 'null');
 function initGoogleAuth() {
   if (!window.google) { setTimeout(initGoogleAuth, 500); return; }
 
-  // Restore saved user display immediately
-  if (savedUser) restoreUserUI(savedUser);
+  // Restore saved user UI immediately (photo + nom)
+  if (savedUser) {
+    restoreUserUI(savedUser);
+    document.getElementById('googleSignInBtn').innerHTML = `${GOOGLE_SVG} ✓ Connecté — Se déconnecter`;
+    document.getElementById('cloudDot').className = 'status-dot dot-green';
+    document.getElementById('cloudStatusText').textContent = `Connecté : ${savedUser.email}`;
+  }
 
+  // Token client pour Drive API
   tokenClient = google.accounts.oauth2.initTokenClient({
     client_id: CLIENT_ID,
     scope: SCOPES,
-    prompt: '', // silent re-auth if possible
     callback: async (resp) => {
       if (resp.error) {
-        if (resp.error !== 'interaction_required') showToast('❌', 'Connexion annulée');
+        if (resp.error !== 'interaction_required' && resp.error !== 'access_denied') {
+          showToast('❌', 'Connexion annulée');
+        }
         return;
       }
       accessToken = resp.access_token;
@@ -1353,11 +1360,9 @@ function initGoogleAuth() {
     }
   });
 
-  // Try silent auto-reconnect if user was previously connected
+  // Auto-reconnect silencieux si déjà connecté avant
   if (savedUser) {
-    setTimeout(() => {
-      tokenClient.requestAccessToken({ prompt: '' });
-    }, 800);
+    tokenClient.requestAccessToken({ prompt: '' });
   }
 }
 
@@ -1365,13 +1370,15 @@ function restoreUserUI(user) {
   document.getElementById('userName').textContent = user.name || user.email;
   document.getElementById('userSub').textContent = user.email;
   const av = document.getElementById('userAvatar');
+  av.innerHTML = '';
   if (user.picture) {
-    av.innerHTML = '';
-    const img = document.createElement('img');
-    img.src = user.picture;
-    img.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:50%';
+    // Utilise un proxy pour éviter les erreurs CORS/CSP sur les images Google
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:50%;display:block';
+    img.onload = () => { av.innerHTML = ''; av.appendChild(img); };
     img.onerror = () => { av.innerHTML = ''; av.textContent = (user.name||'?')[0].toUpperCase(); };
-    av.appendChild(img);
+    img.src = user.picture;
   } else {
     av.textContent = (user.name||'?')[0].toUpperCase();
   }
