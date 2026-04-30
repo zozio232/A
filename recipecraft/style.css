@@ -154,7 +154,7 @@ body {
     padding-bottom: 5px;
     border-bottom: 1px solid #444;
     text-transform: uppercase;
-    font-family: 'Minecraft', sans-serif; /* Si tu as la font */
+    font-family: 'Minecraftia', sans-serif; /* Si tu as la font */
 }
 
 
@@ -229,5 +229,5 @@ body {
     margin-top: 0;
     color: #ffcc00;
     
-    font-family: 'Minecraft', sans-serif;
+    font-family: 'Minecraftia', sans-serif;
 }
