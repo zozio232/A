@@ -1400,6 +1400,12 @@
     "category": "Blocks",
     "icon": "assets/items/sand.webp"
   },
+    {
+    "id": "bone_meal",
+    "name": "Bone Meal",
+    "category": "Ingredients",
+    "icon": "assets/items/bone_meal.png"
+  },
   {
     "id": "gravel",
     "name": "Gravel",

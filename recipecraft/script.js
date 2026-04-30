@@ -40,7 +40,7 @@ function autoGenerateWood(baseData) {
     ];
     // --- GÉNÉRATION DES DYES (Colorants) ---
     const dyeCrafts = [
-        { id: "white_dye", name: "White Dye", r: ["bonemeal"] }, // Ou Lily of the valley
+        { id: "white_dye", name: "White Dye", r: ["bone_meal"] }, // Ou Lily of the valley
         { id: "orange_dye", name: "Orange Dye", r: ["orange_tulip"], m: ["red_dye", "yellow_dye"] },
         { id: "magenta_dye", name: "Magenta Dye", r: ["allium"], m: ["purple_dye", "pink_dye"] },
         { id: "light_blue_dye", name: "Light Blue Dye", r: ["blue_orchid"], m: ["blue_dye", "white_dye"] },
