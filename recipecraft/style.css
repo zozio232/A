@@ -196,7 +196,7 @@ body {
     background-repeat: repeat; /* Répète l'image partout */
     background-size: 48px;     /* On force la taille d'origine pour être sûr */
     image-rendering: pixelated; 
-    font-family: sans-serif;
+    font-family: Minecraftia;
     color: white;
 }
 #item-list {
