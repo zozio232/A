@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Minecraftia';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Minecraftia'), url('../Minecraftia.woff') format('woff');
+}
+
+
 :root {
     --mc-gray: #8b8b8b;
     --mc-dark: #373737;
