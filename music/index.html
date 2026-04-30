@@ -101,6 +101,24 @@ img {
     user-select: none;
     
 }
+
+/* Bloque la sélection et le drag natif sur tout ce qui est interactif */
+.disc, #inventory, #jukebox {
+    user-select: none;           /* Empêche le surlignage bleu */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+    -webkit-user-drag: none;     /* Empêche le navigateur de "détacher" l'image */
+    
+    touch-action: none;          /* Empêche le scroll/zoom sur mobile pendant le drag */
+    -webkit-touch-callout: none; /* Empêche le menu contextuel sur iOS */
+}
+
+/* Optionnel : force le curseur sur toute la page pendant le drag pour éviter les changements */
+body.dragging {
+    cursor: grabbing !important;
+}
     </style>
 </head>
 <body>
