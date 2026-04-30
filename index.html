@@ -45,18 +45,26 @@
 }
 /* L'animation du bond */
 @keyframes jump-animation {
-    0%, 100% { bottom: 70px; } /* Position de départ (sur le footer) */
-    50% { bottom: 150px; }    /* Hauteur du saut */
+    0% { transform: translateY(0) scaleX(var(--direction, 1)); }
+    50% { transform: translateY(-100px) scaleX(var(--direction, 1)); } /* Il monte de 100px */
+    100% { transform: translateY(0) scaleX(var(--direction, 1)); }
 }
 
 .jump {
-    animation: jump-animation 0.5s ease;
+    /* "cubic-bezier" donne l'effet de pesanteur smooth (accélère en retombant) */
+    animation: jump-animation 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
 .steve-animation {
-    /* ... tes réglages actuels ... */
-    pointer-events: auto !important; /* On réactive le clic sur Steve ! */
-    cursor: pointer; /* Change le curseur pour montrer qu'on peut cliquer */
+    position: fixed;
+    bottom: 70px;
+    left: -100px;
+    width: 100px;
+    z-index: 1000;
+    pointer-events: auto; /* Important pour le clic */
+    cursor: pointer;
+    /* On garde l'animation de marche */
+    animation: walk-around 10s linear infinite;
 }
 
 footer {
@@ -300,14 +308,23 @@ footer {
     const steve = document.querySelector('.steve-animation');
 
     steve.addEventListener('click', () => {
-        // Si Steve n'est pas déjà en train de sauter
         if (!steve.classList.contains('jump')) {
+            // On récupère le sens actuel de Steve via le style calculé
+            const style = window.getComputedStyle(steve);
+            const matrix = style.transform;
+            
+            // On stocke la direction (gauche ou droite) dans une variable CSS
+            if (matrix.includes('-1')) {
+                steve.style.setProperty('--direction', '-1');
+            } else {
+                steve.style.setProperty('--direction', '1');
+            }
+
             steve.classList.add('jump');
             
-            // On retire la classe après l'animation (500ms)
             setTimeout(() => {
                 steve.classList.remove('jump');
-            }, 500);
+            }, 600); // 600ms pour correspondre au CSS
         }
     });
 </script>
