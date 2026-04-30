@@ -1468,5 +1468,29 @@
     "name": "Blue Orchid",
     "category": "Building",
     "icon": "assets/items/blue_orchid.png"
+  },
+    {
+    "id": "dandelion",
+    "name": "Dandelion",
+    "category": "Colored Blocks",
+    "icon": "assets/items/dandelion.png"
+  },
+    {
+    "id": "peony",
+    "name": "Peony",
+    "category": "Colored Blocks",
+    "icon": "assets/items/peony.png"
+  },
+    {
+    "id": "cactus",
+    "name": "Cactus",
+    "category": "Building",
+    "icon": "assets/items/cactus.png"
+  },
+    {
+    "id": "oxeye_daisy",
+    "name": "Oxeye Daisy",
+    "category": "Building",
+    "icon": "assets/items/oxeye_daisy.png"
   }
 ]
