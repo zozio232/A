@@ -26,23 +26,22 @@
         }
 
         /* --- JUKEBOX CENTRAL --- */
-        #jukebox-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-        }
-
         #jukebox {
-            width: 150px;
+            width: 200px; /* Tu peux augmenter cette valeur si tu le veux encore plus gros */
             cursor: pointer;
             transition: transform 0.1s;
             z-index: 10;
             image-rendering: pixelated;
         }
 
+        /* Pour s'assurer qu'il utilise tout l'espace central */
+        #jukebox-container {
+            flex: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px; /* Force un espace minimum pour ne pas qu'il soit écrasé */
+        }
         #jukebox.active { transform: scale(1.1); }
 
         /* --- INVENTAIRE DES DISQUES --- */
@@ -122,7 +121,10 @@ body.dragging {
     </style>
 </head>
 <body>
-
+<header>
+    <h1>AMAICRAFT - MUSIC PLAYER</h1>
+    <img src="parrotparty.gif" alt="Parrot Party">
+</header>
 <a href="https://fr.minecraft.wiki/w/Disque" target="_blank" class="wiki-link">Wiki Disques</a>
 
 <div id="jukebox-container">
