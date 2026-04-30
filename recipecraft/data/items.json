@@ -1416,7 +1416,14 @@
   {
     "id": "compass",
     "name": "Compass",
+    "category":"Tools",
     "icon": "assets/items/compass.gif",
-    "recipes": null
+    "recipes": [
+    [
+      [null, "iron_ingot", null],
+      ["iron_ingot", "redstone_dust", "iron_ingot"],
+      [null, "iron_ingot", null]
+    ]
+    ]
   }
 ]
