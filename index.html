@@ -11,16 +11,30 @@
 
 
 
-/* Style de Steve */
+/* --- MODIFICATIONS STEVE --- */
 .steve-animation {
     position: fixed;
-    bottom: 20px; /* Distance du bas de l'écran */
-    left: 0;
     bottom: 70px;
-    width: 100px; /* Ajuste la taille selon ton GIF */
+    left: -100px;
+    width: 100px;
     z-index: 1000;
-    pointer-events: none; /* Pour ne pas gêner le clic sur les liens */
+    /* On change 'none' en 'auto' pour pouvoir cliquer dessus ! */
+    pointer-events: auto; 
+    cursor: pointer;
     animation: walk-around 10s linear infinite;
+    transition: transform 0.1s; /* Petit feedback au clic */
+}
+
+/* L'animation du bond (Axe Y uniquement) */
+@keyframes jump-animation {
+    0% { bottom: 70px; animation-timing-function: ease-out; }
+    50% { bottom: 250px; animation-timing-function: ease-in; } /* Hauteur du saut */
+    100% { bottom: 70px; }
+}
+
+/* Classe qu'on ajoutera en JS */
+.jumping {
+    animation: walk-around 10s linear infinite, jump-animation 0.8s ease-in-out !important;
 }
 
 @keyframes walk-around {
@@ -281,4 +295,19 @@ footer {
 </footer>
 
 </body>
+<script>
+    const steve = document.querySelector('.steve-animation');
+
+    steve.addEventListener('click', () => {
+        // Si Steve n'est pas déjà en train de sauter
+        if (!steve.classList.contains('jumping')) {
+            steve.classList.add('jumping');
+
+            // On retire la classe après 800ms (durée de l'animation)
+            setTimeout(() => {
+                steve.classList.remove('jumping');
+            }, 800);
+        }
+    });
+</script>
 </html>
