@@ -201,12 +201,13 @@ discNames.forEach(name => {
     const img = document.createElement('img');
     img.src = `Discs/${name}.png`;
     img.className = 'disc';
-    img.dataset.audio = `Discs/${name}.ogg`;
+    img.dataset.id = name; // ON DOIT UTILISER DATA-ID
     
     img.addEventListener('mousedown', (e) => {
         e.preventDefault();
         isDragging = true;
-        currentDiscData = { audio: img.dataset.audio, src: img.src };
+        // ON STOCKE L'ID ICI
+        currentDiscData = { id: img.dataset.id, src: img.src }; 
         dragIcon.src = img.src;
         dragIcon.style.display = 'block';
         updateDragPosition(e);
@@ -231,13 +232,16 @@ window.addEventListener('mouseup', (e) => {
     const rect = jukebox.getBoundingClientRect();
     if (e.clientX > rect.left && e.clientX < rect.right && e.clientY > rect.top && e.clientY < rect.bottom) {
         
-        // On extrait le nom du disque depuis l'audio (ex: "5")
-        const fileName = currentDiscData.audio.split('/').pop().replace('.ogg', '');
-        const videoId = ytIds[fileName];
+        // On récupère directement l'id (ex: "cat") stocké dans currentDiscData
+        const discName = currentDiscData.id; 
+        const videoId = ytIds[discName];
 
         if (videoId && player) {
-            // CORRECT : On utilise l'API YouTube pour charger et lire
-            player.loadVideoById(videoId);
+            player.loadVideoById({
+                videoId: videoId,
+                startSeconds: 0,
+                suggestedQuality: 'small'
+            });
             player.playVideo();
             
             currentDiscImg = currentDiscData.src;
