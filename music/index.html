@@ -190,15 +190,28 @@ let player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('yt-player', {
         height: '0', width: '0', videoId: '',
-        playerVars: { 
-            'autoplay': 1, 
-            'controls': 0,
-            'origin': window.location.origin // Aide YouTube à accepter ton site
-        },
+        playerVars: { 'autoplay': 1, 'controls': 0 },
         events: {
             'onReady': (event) => {
-                event.target.unMute(); // TRÈS IMPORTANT
-                event.target.setVolume(100);
+                console.log("✅ Le lecteur est prêt !");
+                event.target.unMute();
+            },
+            'onError': (event) => {
+                // C'est ici que tu sauras pourquoi ça ne joue pas !
+                const errorCodes = {
+                    2: "ID de vidéo invalide",
+                    5: "Contenu HTML5 impossible à lire",
+                    100: "Vidéo supprimée ou privée",
+                    101: "L'auteur interdit la lecture hors de YouTube",
+                    150: "L'auteur interdit la lecture hors de YouTube"
+                };
+                console.error("❌ Erreur YouTube : " + (errorCodes[event.data] || "Erreur inconnue"));
+                alert("Impossible de lire ce disque : " + (errorCodes[event.data] || "Vérifie les droits d'auteur"));
+            },
+            'onStateChange': (event) => {
+                if (event.data == YT.PlayerState.PLAYING) {
+                    console.log("🎵 Musique chargée et en cours de lecture !");
+                }
             }
         }
     });
@@ -257,6 +270,8 @@ window.addEventListener('mouseup', (e) => {
                 startSeconds: 0,
                 suggestedQuality: 'small'
             });
+            player.unMute();
+            player.setVolume(100);
             player.playVideo();
             
             currentDiscImg = currentDiscData.src;
