@@ -80,7 +80,26 @@
             top: 20px;
             right: 20px;
             color: white;
+        
         }
+
+
+        /* Le disque qui suit la souris */
+.drag-cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    pointer-events: none; /* Indispensable pour ne pas gêner le clic sur le jukebox */
+    z-index: 9999;
+    image-rendering: pixelated;
+    display: none; /* Caché par défaut */
+}
+
+/* On désactive le drag natif sur TOUTES les images */
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
     </style>
 </head>
 <body>
@@ -100,70 +119,84 @@ const jukebox = document.getElementById('jukebox');
 const player = document.getElementById('player');
 const inventory = document.getElementById('inventory');
 
-// Liste corrigée selon tes fichiers
-const discNames = [
-    "5", "11", "13", "blocks", "cat", "chirp", "creator", "far", 
-    "lava_chicken", "mall", "mellohi", "otherside", "pigstep", 
-    "precipire", "relic", "stal", "strad", "tears", "wait", "ward"
-];
+// On crée un élément unique qui servira de "curseur" pendant le drag
+const dragIcon = document.createElement('img');
+dragIcon.className = 'drag-cursor';
+document.body.appendChild(dragIcon);
 
-// Création d'une image invisible pour "tromper" le navigateur
-const hiddenImg = new Image();
-hiddenImg.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+let isDragging = false;
+let currentDiscData = null;
+
+const discNames = ["5", "11", "13", "blocks", "cat", "chirp", "creator", "far", "mall", "mellohi", "otherside", "pigstep", "relic", "stal", "strad", "wait", "ward"];
 
 discNames.forEach(name => {
     const img = document.createElement('img');
     img.src = `Discs/${name}.png`;
     img.className = 'disc';
-    img.draggable = true;
     img.dataset.audio = `Discs/${name}.mp3`;
     
-    img.addEventListener('dragstart', (e) => {
-        // On stocke les infos
-        e.dataTransfer.setData('audio', img.dataset.audio);
-        e.dataTransfer.setData('imgSrc', img.src);
+    // Quand on appuie sur la souris
+    img.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        currentDiscData = {
+            audio: img.dataset.audio,
+            src: img.src
+        };
         
-        // --- LA MAGIE EST ICI ---
-        // On remplace le fantôme du PNG par l'image invisible
-        e.dataTransfer.setDragImage(hiddenImg, 0, 0);
+        // On prépare l'icône qui suit la souris
+        dragIcon.src = img.src;
+        dragIcon.style.display = 'block';
+        updateDragPosition(e);
         
-        // On change le curseur pour montrer qu'on porte quelque chose
-        img.style.opacity = "0.4";
-    });
-
-    img.addEventListener('dragend', () => {
-        img.style.opacity = "1";
+        img.style.opacity = "0.5";
     });
 
     inventory.appendChild(img);
 });
 
-// Gestion du Jukebox (inchangée mais assure-toi d'avoir ces events)
-jukebox.addEventListener('dragover', (e) => {
-    e.preventDefault(); 
-    jukebox.style.transform = "scale(1.1)";
-});
+// Suivi de la souris
+window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    updateDragPosition(e);
 
-jukebox.addEventListener('dragleave', () => {
-    jukebox.style.transform = "scale(1)";
-});
-
-jukebox.addEventListener('drop', (e) => {
-    e.preventDefault();
-    jukebox.style.transform = "scale(1)";
-    
-    const audioSrc = e.dataTransfer.getData('audio');
-    const imgSrc = e.dataTransfer.getData('imgSrc');
-
-    if (audioSrc) {
-        player.src = audioSrc;
-        player.play();
-        currentDiscImg = imgSrc;
-        jukebox.classList.add('active');
+    // Check si on survole le jukebox
+    const rect = jukebox.getBoundingClientRect();
+    if (e.clientX > rect.left && e.clientX < rect.right && 
+        e.clientY > rect.top && e.clientY < rect.bottom) {
+        jukebox.style.transform = "scale(1.1) rotate(5deg)";
+    } else {
+        jukebox.style.transform = "scale(1)";
     }
 });
 
-// ... garde ta fonction ejectDisc() ici ...
+// Quand on relâche
+window.addEventListener('mouseup', (e) => {
+    if (!isDragging) return;
+    
+    const rect = jukebox.getBoundingClientRect();
+    // Si on lâche au-dessus du jukebox
+    if (e.clientX > rect.left && e.clientX < rect.right && 
+        e.clientY > rect.top && e.clientY < rect.bottom) {
+        
+        player.src = currentDiscData.audio;
+        player.play();
+        currentDiscImg = currentDiscData.src; // Pour l'éjection
+        jukebox.classList.add('active');
+    }
+
+    // Reset
+    isDragging = false;
+    dragIcon.style.display = 'none';
+    document.querySelectorAll('.disc').forEach(d => d.style.opacity = "1");
+    jukebox.style.transform = "scale(1)";
+});
+
+function updateDragPosition(e) {
+    dragIcon.style.left = (e.clientX - 25) + 'px';
+    dragIcon.style.top = (e.clientY - 25) + 'px';
+}
+
+// Garde ta fonction ejectDisc() d'avant ici...
 
     function ejectDisc() {
         const disc = document.createElement('img');
