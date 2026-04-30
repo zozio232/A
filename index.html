@@ -43,6 +43,21 @@
         transform: scaleX(-1); /* Se retourne pour recommencer */
     }
 }
+/* L'animation du bond */
+@keyframes jump-animation {
+    0%, 100% { bottom: 70px; } /* Position de départ (sur le footer) */
+    50% { bottom: 150px; }    /* Hauteur du saut */
+}
+
+.jump {
+    animation: jump-animation 0.5s ease;
+}
+
+.steve-animation {
+    /* ... tes réglages actuels ... */
+    pointer-events: auto !important; /* On réactive le clic sur Steve ! */
+    cursor: pointer; /* Change le curseur pour montrer qu'on peut cliquer */
+}
 
 footer {
     position: fixed; /* Il est fixé par rapport à la fenêtre */
@@ -281,4 +296,19 @@ footer {
 </footer>
 
 </body>
+<script>
+    const steve = document.querySelector('.steve-animation');
+
+    steve.addEventListener('click', () => {
+        // Si Steve n'est pas déjà en train de sauter
+        if (!steve.classList.contains('jump')) {
+            steve.classList.add('jump');
+            
+            // On retire la classe après l'animation (500ms)
+            setTimeout(() => {
+                steve.classList.remove('jump');
+            }, 500);
+        }
+    });
+</script>
 </html>
