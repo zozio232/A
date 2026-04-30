@@ -4,6 +4,70 @@
     <meta charset="UTF-8">
     <title>AmaiCraft Jukebox</title>
     <style>
+        @import url('https://fonts.cdnfonts.com/css/minecraftia');
+
+        header img {
+            /* --- POSITIONNEMENT --- */
+            position: absolute;
+            right: 0;   /* Collé au mur de droite */
+            top: 0;
+            bottom: 0;
+            
+            /* --- TAILLE --- */
+            height: 100%;
+            width: auto;
+        }
+        /* HEADER */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 4px solid #000;
+            padding: 20px;
+            text-align: center;
+
+                /* --- AJOUT INDISPENSABLE --- */
+            position: relative; /* Sert de repère pour le perroquet */
+            overflow: hidden;    /* Empêche le perroquet de déborder si besoin */
+            min-height: 70px;   /* Ajuste selon la taille de ton texte pour pas que ce soit trop plat */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            text-shadow: 3px 3px 0px #3f3f3f;
+            letter-spacing: 2px;
+        }
+
+        /* NAV BAR STYLE BOUTONS MC */
+        .nav {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav a {
+            background: #555;
+            border: 2px solid #000;
+            border-top-color: #ababab;
+            border-left-color: #ababab;
+            padding: 8px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            background: #8b8b8b;
+            border-top-color: #dbdbdb;
+            border-left-color: #dbdbdb;
+        }
+
+
+
+
+
+
         :root {
             --mc-gui-panel: #c6c6c6;
             --mc-gui-button: #7e7e7e;
@@ -122,9 +186,16 @@ body.dragging {
 </head>
 <body>
 <header>
-    <h1>AMAICRAFT - MUSIC PLAYER</h1>
+    <h1>AMAICRAFT</h1>
     <img src="parrotparty.gif" alt="Parrot Party">
 </header>
+
+<div class="nav">
+    <a href="index.html">ACCUEIL</a>
+    <a href="https://minecraft.wiki">WIKI</a>
+    <a href="https://www.minecraft.net/fr-fr/minecraft-tips-for-beginners">GUIDES</a>
+</div>
+
 <a href="https://fr.minecraft.wiki/w/Disque" target="_blank" class="wiki-link">Wiki Disques</a>
 
 <div id="jukebox-container">
