@@ -23,6 +23,10 @@
     cursor: pointer;
     animation: walk-around 10s linear infinite;
     transition: transform 0.1s; /* Petit feedback au clic */
+
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: manipulation;
 }
 
 /* L'animation du bond (Axe Y uniquement) */
