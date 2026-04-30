@@ -55,7 +55,7 @@ function autoGenerateWood(baseData) {
         { id: "brown_dye", name: "Brown Dye", r: ["cocoa_beans"] },
         { id: "green_dye", name: "Green Dye", smelt: "cactus" },
         { id: "red_dye", name: "Red Dye", r: ["poppy"] },
-        { id: "black_dye", name: "Black Dye", r: ["ink_sac"] }
+        { id: "black_dye", name: "Black Dye", r: ["wither_rose"], r: ["ink_sac"] }
     ];
 
     dyeCrafts.forEach(d => {
