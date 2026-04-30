@@ -130,6 +130,39 @@
     <a href="https://minecraft.wiki" target="_blank" rel="noopener noreferrer">WIKI</a>
     <a href="https://www.minecraft.net/fr-fr/minecraft-tips-for-beginners" target="_blank" rel="noopener noreferrer">GUIDES</a>
 </div>
+<main class="container">
+    <div class="tabs">
+        <button class="tab-btn" onclick="openFolder('passive')">PASSIVE</button>
+        <button class="tab-btn" onclick="openFolder('neutral')">NEUTRAL</button>
+        <button class="tab-btn" onclick="openFolder('hostile')">HOSTILE</button>
+        <button class="tab-btn" onclick="openFolder('fool')">FOOL</button>
+    </div>
+
+    <div id="passive" class="folder-content">
+        <div class="mob-card" onclick="playMobSound('cow', this)">
+            <img src="mobs/cow.png" alt="Cow">
+            <p>Cow</p>
+        </div>
+        </div>
+
+    <div id="neutral" class="folder-content" style="display:none;">
+        <div class="mob-card" onclick="playMobSound('enderman', this)">
+            <img src="mobs/enderman.png" alt="Enderman">
+            <p>Enderman</p>
+        </div>
+    </div>
+
+    <div id="hostile" class="folder-content" style="display:none;">
+        <div class="mob-card" onclick="playMobSound('creeper', this)">
+            <img src="mobs/creeper.png" alt="Creeper">
+            <p>Creeper</p>
+        </div>
+    </div>
+
+    <div id="fool" class="folder-content" style="display:none;">
+        </div>
+</main>
+
 <footer>
     <strong>Page communautaire Minecraft</strong> — Site non officiel<br>
     Ce site n'est pas affilié à Mojang AB.
