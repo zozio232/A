@@ -252,10 +252,10 @@
     "category": "Passive",
     "image": "mob/passive/glow_squid.gif",
     "sounds": [
-      "mob/sounds/glow_squid_hurt1.mp3",
-      "mob/sounds/glow_squid_hurt2.mp3",
-      "mob/sounds/glow_squid_hurt3.mp3",
-      "mob/sounds/glow_squid_hurt4.mp3"
+      "mob/sounds/Glow_Squid_hurt1.mp3",
+      "mob/sounds/Glow_Squid_hurt2.mp3",
+      "mob/sounds/Glow_Squid_hurt3.mp3",
+      "mob/sounds/Glow_Squid_hurt4.mp3"
     ]
   },
     {
