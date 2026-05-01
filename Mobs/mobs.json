@@ -380,7 +380,7 @@
       "mob/sounds/Rabbit_hurt4.ogg"
     ]
   },
-      {
+    {
     "name": "Salmon",
     "category": "Passive",
     "image": "mob/passive/salmon.gif",
@@ -402,7 +402,7 @@
       "mob/sounds/Sheep3.ogg"
     ]
   },
-      {
+    {
     "name": "Skeleton Horse",
     "category": "Passive",
     "image": "mob/passive/skeleton_horse.png",
@@ -413,7 +413,7 @@
       "mob/sounds/Skeleton_Horse_hurt4.ogg"
     ]
   },
-        {
+    {
     "name": "Sniffer",
     "category": "Passive",
     "image": "mob/passive/sniffer.png",
@@ -421,6 +421,16 @@
       "mob/sounds/Sniffer_hurt1.ogg",
       "mob/sounds/Sniffer_hurt2.ogg",
       "mob/sounds/Sniffer_hurt3.ogg"
+    ]
+  },
+    {
+    "name": "Snow Golem",
+    "category": "Passive",
+    "image": "mob/passive/snow_golem.png",
+    "sounds": [
+      "mob/sounds/Snow_Golem_hurt1.ogg",
+      "mob/sounds/Snow_Golem_hurt2.ogg",
+      "mob/sounds/Snow_Golem_hurt3.ogg"
     ]
   }
 ]
