@@ -62,12 +62,11 @@
     "smelting": { "ingredient": "raw_gold" },
     "recipes":[
     [
-      ["iron_nugget", "iron_nugget", "iron_nugget"],
-      ["iron_nugget", "iron_nugget", "iron_nugget"],
-      ["iron_nugget", "iron_nugget", "iron_nugget"]
+      ["gold_nugget", "gold_nugget", "gold_nugget"],
+      ["gold_nugget", "gold_nugget", "gold_nugget"],
+      ["gold_nugget", "gold_nugget", "gold  _nugget"]
     ]
-    ],
-    "obtain":9
+    ]
   },
       {
     "id": "copper_ingot",
@@ -666,7 +665,7 @@
     "category": "Tools",
     "recipes":[
     [
-      [null, "planks", null],
+      [null, "iron_ingot", null],
       [null, "stick", null],
       [null, "stick", null]
     ]
