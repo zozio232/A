@@ -164,7 +164,7 @@
       "mob/sounds/Cat_hurt3.mp3"
     ]
   },
-         {
+  {
     "name": "Chicken",
     "category": "Passive",
     "image": "mob/passive/chicken.png",
