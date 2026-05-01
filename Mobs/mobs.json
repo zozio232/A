@@ -428,9 +428,9 @@
     "category": "Passive",
     "image": "mob/passive/snow_golem.png",
     "sounds": [
-      "mob/sounds/Snow_Golem_hurt1.ogg",
-      "mob/sounds/Snow_Golem_hurt2.ogg",
-      "mob/sounds/Snow_Golem_hurt3.mp3"
+      "mob/sounds/Snow_golem_hurt1.ogg",
+      "mob/sounds/Snow_golem_hurt2.ogg",
+      "mob/sounds/Snow_golem_hurt3.mp3"
     ]
   },
       {
