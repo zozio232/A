@@ -64,6 +64,106 @@
       "mob/sounds/Camel_Husk_hurt4.ogg"
     ]
   },
+      {
+    "name": "Calico Cat",
+    "category": "Passive",
+    "image": "mob/passive/calico_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "British Shorthair Cat",
+    "category": "Passive",
+    "image": "mob/passive/british_shorthair_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "Black Cat",
+    "category": "Passive",
+    "image": "mob/passive/black_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "Jellie Cat",
+    "category": "Passive",
+    "image": "mob/passive/jellie_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "Persian Cat",
+    "category": "Passive",
+    "image": "mob/passive/persian_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "Red Cat",
+    "category": "Passive",
+    "image": "mob/passive/red_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "Tabby Cat",
+    "category": "Passive",
+    "image": "mob/passive/tabby_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "Tuxedo Cat",
+    "category": "Passive",
+    "image": "mob/passive/tuxedo_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "Siamese Cat",
+    "category": "Passive",
+    "image": "mob/passive/siamese_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
+       {
+    "name": "White Cat",
+    "category": "Passive",
+    "image": "mob/passive/white_cat.png",
+    "sounds": [
+      "mob/sounds/Cat_hurt1.mp3",
+      "mob/sounds/Cat_hurt2.mp3",
+      "mob/sounds/Cat_hurt3.mp3"
+    ]
+  },
     {
     "name": "Cow",
     "category": "Passive",
