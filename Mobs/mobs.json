@@ -56,7 +56,7 @@
       {
     "name": "Camel Husk",
     "category": "Passive",
-    "image": "mob/passive/bat.gif",
+    "image": "mob/passive/camel_husk.gif",
     "sounds": [
       "mob/sounds/Camel_Husk_hurt1.ogg",
       "mob/sounds/Camel_Husk_hurt2.ogg",
