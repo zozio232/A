@@ -403,14 +403,24 @@
     ]
   },
       {
-    "name": "Sheep",
+    "name": "Skeleton Horse",
     "category": "Passive",
-    "image": "mob/passive/sheep.png",
+    "image": "mob/passive/skeleton_horse.png",
     "sounds": [
       "mob/sounds/Skeleton_Horse_hurt1.ogg",
       "mob/sounds/Skeleton_Horse_hurt2.ogg",
       "mob/sounds/Skeleton_Horse_hurt3.ogg",
-      "mob/sounds/Skeleton_Horse_hurt1.ogg"
+      "mob/sounds/Skeleton_Horse_hurt4.ogg"
+    ]
+  },
+        {
+    "name": "Sniffer",
+    "category": "Passive",
+    "image": "mob/passive/sniffer.png",
+    "sounds": [
+      "mob/sounds/Sniffer_hurt1.ogg",
+      "mob/sounds/Sniffer_hurt2.ogg",
+      "mob/sounds/Sniffer_hurt3.ogg"
     ]
   }
 ]
