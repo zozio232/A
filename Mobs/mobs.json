@@ -474,7 +474,7 @@
       "mob/sounds/Tadpole_hurt1.ogg",
       "mob/sounds/Tadpole_hurt2.ogg",
       "mob/sounds/Tadpole_hurt3.mp3",
-      "mob/sounds/Tadpole_hurt4.mp3"
+      "mob/sounds/Tadpole_hurt4.ogg"
     ]
   },
     {
@@ -539,6 +539,8 @@
 
 
 
+
+
     {
     "name": "Bee",
     "category": "Neutral",
@@ -577,7 +579,148 @@
     "sounds": [
       "mob/sounds/Drowned_hurt1.mp3",
       "mob/sounds/Drowned_hurt2.mp3",
-      "mob/sounds/Drowned_hurt3.ogg"
+      "mob/sounds/Drowned_hurt3.mP3"
+    ]
+  },
+    {
+    "name": "Enderman",
+    "category": "Neutral",
+    "image": "mob/neutral/enderman.png",
+    "sounds": [
+      "mob/sounds/Enderman_hurt1.ogg",
+      "mob/sounds/Enderman_hurt2.ogg",
+      "mob/sounds/Enderman_hurt3.mp3",
+      "mob/sounds/Enderman_hurt4.mp3"
+    ]
+  },
+  {
+    "name": "Fox",
+    "category": "Neutral",
+    "image": "mob/neutral/fox.png",
+    "sounds": [
+      "mob/sounds/Fox_hurt1.mp3",
+      "mob/sounds/Fox_hurt2.mp3",
+      "mob/sounds/Fox_hurt3.mp3",
+      "mob/sounds/Fox_hurt4.mp3"
+    ]
+  },
+  {
+    "name": "Goat",
+    "category": "Neutral",
+    "image": "mob/neutral/goat.png",
+    "sounds": [
+      "mob/sounds/Goat_hurt1.mp3",
+      "mob/sounds/Goat_hurt2.mp3",
+      "mob/sounds/Goat_hurt3.mp3",
+      "mob/sounds/Goat_hurt4.mp3"
+    ]
+  },
+  {
+    "name": "iron Golem",
+    "category": "Neutral",
+    "image": "mob/neutral/iron_golem.png",
+    "sounds": [
+      "mob/sounds/Iron_golem_hurt1.ogg",
+      "mob/sounds/Iron_golem_hurt2.ogg",
+      "mob/sounds/iron_golem_hurt3.ogg",
+      "mob/sounds/Iron_golem_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Llama",
+    "category": "Neutral",
+    "image": "mob/neutral/llama.png",
+    "sounds": [
+      "mob/sounds/Llama_hurt1.mp3",
+      "mob/sounds/Llama_hurt2.mp3",
+      "mob/sounds/Llama_hurt3.mp3"
+    ]
+  },
+  {
+    "name": "Nautilus",
+    "category": "Neutral",
+    "image": "mob/neutral/nautilus.gif",
+    "sounds": [
+      "mob/sounds/Nautilus_hurt_land1.mp3",
+      "mob/sounds/Nautilus_hurt_land2.ogg",
+      "mob/sounds/Nautilus_hurt_land3.ogg",
+      "mob/sounds/Nautilus_hurt_land4.ogg"
+    ]
+  },
+  {
+    "name": "Panda",
+    "category": "Neutral",
+    "image": "mob/neutral/panda.png",
+    "sounds": [
+      "mob/sounds/Panda_hurt1.mp3",
+      "mob/sounds/Panda_hurt2.mp3",
+      "mob/sounds/Panda_hurt3.mp3",
+      "mob/sounds/Panda_hurt4.mp3",
+      "mob/sounds/Panda_hurt5.mp3",
+      "mob/sounds/Panda_hurt6.mp3"
+    ]
+  },
+  {
+    "name": "Piglin",
+    "category": "Neutral",
+    "image": "mob/neutral/piglin.png",
+    "sounds": [
+      "mob/sounds/Piglin_hurt1.mp3",
+      "mob/sounds/Piglin_hurt2.mp3",
+      "mob/sounds/Piglin_hurt3.mp3"
+    ]
+  },
+  {
+    "name": "Polar Bear",
+    "category": "Neutral",
+    "image": "mob/neutral/polar_bear.png",
+    "sounds": [
+      "mob/sounds/Polar_bear_hurt1.ogg",
+      "mob/sounds/Polar_bear_hurt2.ogg",
+      "mob/sounds/Polar_bear_hurt3.ogg",
+      "mob/sounds/Polar_bear_hurt4.ogg"
+    ]
+  },
+    {
+    "name": "Pufferfish",
+    "category": "Neutral",
+    "image": "mob/neutral/pufferfish.gif",
+    "sounds": [
+      "mob/sounds/Pufferfish_hurt1.mp3",
+      "mob/sounds/Pufferfish_hurt2.mp3"
+    ]
+  },
+  {
+    "name": "Spider",
+    "category": "Neutral",
+    "image": "mob/neutral/spider.png",
+    "sounds": [
+      "mob/sounds/Spider_idle1.ogg",
+      "mob/sounds/Spider_idle2.ogg",
+      "mob/sounds/Spider_idle3.ogg",
+      "mob/sounds/Spider_idle4.ogg"
+    ]
+  },
+    {
+    "name": "Wold",
+    "category": "Neutral",
+    "image": "mob/neutral/wolf.png",
+    "sounds": [
+      "mob/sounds/Wolf_hurt1.ogg",
+      "mob/sounds/Wolf_hurt2.ogg",
+      "mob/sounds/Wolf_hurt3.ogg"
+    ]
+  },
+    {
+    "name": "Zombie Nautilus",
+    "category": "Neutral",
+    "image": "mob/neutral/zombie_nautilus.gif",
+    "sounds": [
+      "mob/sounds/Zombie_Nautilus_hurt_land1.ogg",
+      "mob/sounds/Zombie_Nautilus_hurt_land2.ogg",
+      "mob/sounds/Zombie_Nautilus_hurt_land3.ogg",
+      "mob/sounds/Zombie_Nautilus_hurt_land4.ogg"
     ]
   }
+
 ]
