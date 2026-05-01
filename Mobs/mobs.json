@@ -730,6 +730,537 @@
       "mob/sounds/Zombie_pigman_hurt1.ogg",
       "mob/sounds/Zombie_pigman_hurt2.ogg"
     ]
-  }
+  },
 
+
+
+
+
+
+
+
+  {
+    "name": "Blaze",
+    "category": "Hostile",
+    "image": "mob/hostile/blaze.gif",
+    "sounds": [
+      "mob/sounds/Blaze_hurt1.ogg",
+      "mob/sounds/Blaze_hurt2.ogg",
+      "mob/sounds/Blaze_hurt3.ogg",
+      "mob/sounds/Blaze_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Bogged",
+    "category": "Hostile",
+    "image": "mob/hostile/bogged.png",
+    "sounds": [
+      "mob/sounds/Bogged_hurt1.mp3",
+      "mob/sounds/Bogged_hurt2.mp3",
+      "mob/sounds/Bogged_hurt3.mp3",
+      "mob/sounds/Bogged_hurt4.mp3"
+    ]
+  },
+  {
+    "name": "Breeze",
+    "category": "Hostile",
+    "image": "mob/hostile/breeze.webp",
+    "sounds": [
+      "mob/sounds/Breeze_hurt1_JE1_BE1.ogg",
+      "mob/sounds/Breeze_hurt2_JE1_BE1.ogg",
+      "mob/sounds/Breeze_hurt3_JE1_BE1.ogg"
+    ]
+  },
+  {
+    "name": "Creaking",
+    "category": "Hostile",
+    "image": "mob/hostile/creaking.png",
+    "sounds": [
+      "mob/sounds/Creaking_sway1.ogg",
+      "mob/sounds/Creaking_sway2.ogg",
+      "mob/sounds/Creaking_sway3.ogg",
+      "mob/sounds/Creaking_sway4.mp3"
+    ]
+  },
+  {
+    "name": "Creeper",
+    "category": "Hostile",
+    "image": "mob/hostile/creeper.png",
+    "sounds": [
+      "mob/sounds/Creeper_hurt1.ogg",
+      "mob/sounds/Creeper_hurt2.ogg",
+      "mob/sounds/Creeper_hurt3.ogg",
+      "mob/sounds/Creeper_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Elder Guardian",
+    "category": "Hostile",
+    "image": "mob/hostile/elder_guardian.gif",
+    "sounds": [
+      "mob/sounds/Elder_guardian_hurt1.ogg",
+      "mob/sounds/Elder_guardian_hurt2.ogg",
+      "mob/sounds/Elder_guardian_hurt3.ogg",
+      "mob/sounds/Elder_guardian_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Endermite",
+    "category": "Hostile",
+    "image": "mob/hostile/endermite.gif",
+    "sounds": [
+      "mob/sounds/Silverfish_hurt1.ogg",
+      "mob/sounds/Silverfish_hurt2.ogg",
+      "mob/sounds/Silverfish_hurt3.ogg"
+    ]
+  },
+  {
+    "name": "Ender Dragon",
+    "category": "Hostile",
+    "image": "mob/hostile/ender_dragon.gif",
+    "sounds": [
+      "mob/sounds/Ender_dragon_hurt1.ogg",
+      "mob/sounds/Ender_dragon_hurt2.ogg",
+      "mob/sounds/Ender_dragon_hurt3.ogg",
+      "mob/sounds/Ender_dragon_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Evoker",
+    "category": "Hostile",
+    "image": "mob/hostile/evoker.png",
+    "sounds": [
+      "mob/sounds/Evoker_hurt1.mp3",
+      "mob/sounds/Evoker_hurt2.mp3"
+    ]
+  },
+  {
+    "name": "Ghast",
+    "category": "Hostile",
+    "image": "mob/hostile/ghast.gif",
+    "sounds": [
+      "mob/sounds/Ghast_hurt1.ogg",
+      "mob/sounds/Ghast_hurt2.ogg",
+      "mob/sounds/Ghast_hurt3.ogg",
+      "mob/sounds/Ghast_hurt4.ogg",
+      "mob/sounds/Ghast_hurt5.ogg"
+    ]
+  },
+  {
+    "name": "Guardian",
+    "category": "Hostile",
+    "image": "mob/hostile/guardian.gif",
+    "sounds": [
+      "mob/sounds/Guardian_hurt1.ogg",
+      "mob/sounds/Guardian_hurt2.ogg",
+      "mob/sounds/Guardian_hurt3.ogg",
+      "mob/sounds/Guardian_hurt4.ogg"
+    ]
+  },
+
+  {
+    "name": "Hoglin",
+    "category": "Hostile",
+    "image": "mob/hostile/hoglin.png",
+    "sounds": [
+      "mob/sounds/Hoglin_hurt1.mp3",
+      "mob/sounds/Hoglin_hurt2.mp3",
+      "mob/sounds/Hoglin_hurt3.mp3",
+      "mob/sounds/Hoglin_hurt4.mp3"
+    ]
+  },
+  {
+    "name": "Husk",
+    "category": "Hostile",
+    "image": "mob/hostile/husk.png",
+    "sounds": [
+      "mob/sounds/Husk_hurt1.ogg",
+      "mob/sounds/Husk_hurt2.ogg"
+    ]
+  },
+  {
+    "name": "Illusioner",
+    "category": "Hostile",
+    "image": "mob/hostile/illusioner.png",
+    "sounds": [
+      "mob/sounds/Illusioner_hurt1.mp3",
+      "mob/sounds/Illusioner_hurt2.ogg",
+      "mob/sounds/Illusioner_hurt3.mp3"
+    ]
+  },
+  {
+    "name": "Magma Cube",
+    "category": "Hostile",
+    "image": "mob/hostile/magma_cube.png",
+    "sounds": [
+      "mob/sounds/Slime_big1.ogg",
+      "mob/sounds/Slime_big2.ogg",
+      "mob/sounds/Slime_big3.ogg",
+      "mob/sounds/Slime_big4.ogg"
+    ]
+  },
+  {
+    "name": "Parched",
+    "category": "Hostile",
+    "image": "mob/hostile/parched.png",
+    "sounds": [
+      "mob/sounds/Parched_hurt1.ogg",
+      "mob/sounds/Parched_hurt2.ogg",
+      "mob/sounds/Parched_hurt3.ogg",
+      "mob/sounds/Parched_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Phantom",
+    "category": "Hostile",
+    "image": "mob/hostile/phantom.gif",
+    "sounds": [
+      "mob/sounds/Phantom_hurt1.mp3",
+      "mob/sounds/Phantom_hurt2.mp3",
+      "mob/sounds/Phantom_hurt3.mp3"
+    ]
+  },
+  {
+    "name": "Piglin Brute",
+    "category": "Hostile",
+    "image": "mob/hostile/piglin_brute.png",
+    "sounds": [
+      "mob/sounds/Piglin_brute_hurt1.mp3",
+      "mob/sounds/Piglin_brute_hurt2.mp3",
+      "mob/sounds/Piglin_brute_hurt3.mp3",
+      "mob/sounds/Piglin_brute_hurt4.mp3"
+    ]
+  },
+  {
+    "name": "Pillager",
+    "category": "Hostile",
+    "image": "mob/hostile/pillager.png",
+    "sounds": [
+      "mob/sounds/Pillager_hurt1.mp3",
+      "mob/sounds/Pillager_hurt2.mp3",
+      "mob/sounds/Pillager_hurt3.mp3"
+    ]
+  },
+  {
+    "name": "Ravager",
+    "category": "Hostile",
+    "image": "mob/hostile/ravager.png",
+    "sounds": [
+      "mob/sounds/Ravager_hurt1.mp3",
+      "mob/sounds/Ravager_hurt2.mp3",
+      "mob/sounds/Ravager_hurt3.mp3",
+      "mob/sounds/Ravager_hurt4.mp3"
+    ]
+  },
+  {
+    "name": "Shulker",
+    "category": "Hostile",
+    "image": "mob/hostile/shulker.png",
+    "sounds": [
+      "mob/sounds/Shulker_hurt1.mp3",
+      "mob/sounds/Shulker_hurt2.ogg",
+      "mob/sounds/Shulker_hurt3.ogg",
+      "mob/sounds/Shulker_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Silverfish",
+    "category": "Hostile",
+    "image": "mob/hostile/silverfish.gif",
+    "sounds": [
+      "mob/sounds/Silverfish_hurt1.ogg",
+      "mob/sounds/Silverfish_hurt2.ogg",
+      "mob/sounds/Silverfish_hurt3.ogg"
+    ]
+  },
+  {
+    "name": "Skeleton",
+    "category": "Hostile",
+    "image": "mob/hostile/skeleton.png",
+    "sounds": [
+      "mob/sounds/Skeleton_hurt1.ogg",
+      "mob/sounds/Skeleton_hurt2.ogg",
+      "mob/sounds/Skeleton_hurt3.ogg",
+      "mob/sounds/Skeleton_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Slime",
+    "category": "Hostile",
+    "image": "mob/hostile/slime.png",
+    "sounds": [
+      "mob/sounds/Slime_big1.ogg",
+      "mob/sounds/Slime_big2.ogg",
+      "mob/sounds/Slime_big3.ogg"
+    ]
+  },
+  {
+    "name": "Stray",
+    "category": "Hostile",
+    "image": "mob/hostile/stray.png",
+    "sounds": [
+      "mob/sounds/Stray_hurt1.ogg",
+      "mob/sounds/Stray_hurt2.ogg",
+      "mob/sounds/Stray_hurt3.ogg",
+      "mob/sounds/Stray_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Vex",
+    "category": "Hostile",
+    "image": "mob/hostile/vex.gif",
+    "sounds": [
+      "mob/sounds/Vex_hurt1.mp3",
+      "mob/sounds/Vex_hurt2.mp3"
+    ]
+  },
+  {
+    "name": "Vindicator",
+    "category": "Hostile",
+    "image": "mob/hostile/vindicator.png",
+    "sounds": [
+      "mob/sounds/Vindicator_hurt1.mp3",
+      "mob/sounds/Vindicator_hurt2.mp3",
+      "mob/sounds/Vindicator_hurt3.mp3"
+    ]
+  },
+  {
+    "name": "Warden",
+    "category": "Hostile",
+    "image": "mob/hostile/warden.gif",
+    "sounds": [
+      "mob/sounds/Warden_hurt1.ogg",
+      "mob/sounds/Warden_hurt2.ogg",
+      "mob/sounds/Warden_hurt3.ogg",
+      "mob/sounds/Warden_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Witch",
+    "category": "Hostile",
+    "image": "mob/hostile/witch.png",
+    "sounds": [
+      "mob/sounds/Witch_hurt1.mp3",
+      "mob/sounds/Witch_hurt2.ogg",
+      "mob/sounds/Witch_hurt3.ogg"
+    ]
+  },
+  {
+    "name": "Wither Skeleton",
+    "category": "Hostile",
+    "image": "mob/hostile/wither_skeleton.png",
+    "sounds": [
+      "mob/sounds/Wither_skeleton_hurt1.ogg",
+      "mob/sounds/Wither_skeleton_hurt2.ogg",
+      "mob/sounds/Wither_skeleton_hurt3.ogg",
+      "mob/sounds/Wither_skeleton_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Wither",
+    "category": "Hostile",
+    "image": "mob/hostile/wither.png",
+    "sounds": [
+      "mob/sounds/Wither_hurt1.ogg",
+      "mob/sounds/Wither_hurt2.ogg",
+      "mob/sounds/Wither_hurt3.ogg",
+      "mob/sounds/Wither_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Zoglin",
+    "category": "Hostile",
+    "image": "mob/hostile/zoglin.png",
+    "sounds": [
+      "mob/sounds/Zoglin_hurt1.mp3",
+      "mob/sounds/Zoglin_hurt2.mp3",
+      "mob/sounds/Zoglin_hurt3.mp3"
+    ]
+  },
+  {
+    "name": "Zombie",
+    "category": "Hostile",
+    "image": "mob/hostile/zombie.png",
+    "sounds": [
+      "mob/sounds/Zombie_hurt1.ogg",
+      "mob/sounds/Zombie_hurt2.ogg"
+    ]
+  },
+  {
+    "name": "Zombie Villager",
+    "category": "Hostile",
+    "image": "mob/hostile/zombie_villager.png",
+    "sounds": [
+      "mob/sounds/Zombie_villager_hurt1.ogg",
+      "mob/sounds/Zombie_villager_hurt2.ogg"
+    ]
+  },
+
+  {
+    "name": "Angry Ghast",
+    "category": "Fool",
+    "image": "mob/fools/angry_ghast.gif",
+    "sounds": [
+      "mob/sounds/Ghast_hurt1.ogg",
+      "mob/sounds/Ghast_hurt2.ogg",
+      "mob/sounds/Ghast_hurt3.ogg",
+      "mob/sounds/Ghast_hurt4.ogg",
+      "mob/sounds/Ghast_hurt5.ogg"
+    ]
+  },
+  {
+    "name": "Batato",
+    "category": "Fool",
+    "image": "mob/fools/batato.gif",
+    "sounds": [
+      "mob/sounds/Bat_hurt1.mp3",
+      "mob/sounds/Bat_hurt2.mp3",
+      "mob/sounds/Bat_hurt3.mp3",
+      "mob/sounds/Bat_hurt4.mp3"
+    ]
+  },
+  {
+    "name": "Diamond Chicken",
+    "category": "Fool",
+    "image": "mob/fools/diamond_chicken.png",
+    "sounds": [
+      "mob/sounds/Chicken_hurt1.ogg",
+      "mob/sounds/Chicken_hurt2.ogg"
+    ]
+  },
+  {
+    "name": "Love Golem",
+    "category": "Fool",
+    "image": "mob/fools/love_golem.png",
+    "sounds": [
+      "mob/sounds/Iron_golem_hurt1.ogg",
+      "mob/sounds/Iron_golem_hurt2.ogg",
+      "mob/sounds/Iron_golem_hurt3.ogg",
+      "mob/sounds/Iron_golem_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Mega Spud",
+    "category": "Fool",
+    "image": "mob/fools/mega_spud.png",
+    "sounds": [
+      "mob/sounds/Mega_Spud_hurt1.ogg",
+      "mob/sounds/Mega_Spud_hurt2.ogg",
+      "mob/sounds/Mega_Spud_hurt3.ogg",
+      "mob/sounds/Mega_Spud_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Moon Cow",
+    "category": "Fool",
+    "image": "mob/fools/moon_cow.png",
+    "sounds": [
+      "mob/sounds/Cow_hurt1.ogg",
+      "mob/sounds/Cow_hurt2.ogg",
+      "mob/sounds/Cow_hurt3.ogg"
+    ]
+  },
+  {
+    "name": "Friendly Wither",
+    "category": "Fool",
+    "image": "mob/fools/friendly_wither.png",
+    "sounds": [
+      "mob/sounds/Wither_hurt1.ogg",
+      "mob/sounds/Wither_hurt2.ogg",
+      "mob/sounds/Wither_hurt3.ogg",
+      "mob/sounds/Wither_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Plaguewhale Slab",
+    "category": "Fool",
+    "image": "mob/fools/plaguewhale_slab.gif",
+    "sounds": [
+      "mob/sounds/Plaguewhale_Slab_hit1.ogg",
+      "mob/sounds/Plaguewhale_Slab_hit2.ogg",
+      "mob/sounds/Plaguewhale_Slab_hit3.ogg",
+      "mob/sounds/Plaguewhale_Slab_hit4.ogg"
+    ]
+  },
+  {
+    "name": "Poisonous Potato Zombie",
+    "category": "Fool",
+    "image": "mob/fools/poisonous_potato_zombie.png",
+    "sounds": [
+      "mob/sounds/Poisonous_Potato_Zombie_hurt1.ogg",
+      "mob/sounds/Poisonous_Potato_Zombie_hurt2.ogg"
+    ]
+  },
+  {
+    "name": "Ray Tracing",
+    "category": "Fool",
+    "image": "mob/fools/ray_tracing.png",
+    "sounds": [
+      "mob/sounds/Player_hurt1.mp3",
+      "mob/sounds/Player_hurt2.ogg",
+      "mob/sounds/Player_hurt3.ogg"
+    ]
+  },
+  {
+    "name": "Redstone Bug",
+    "category": "Fool",
+    "image": "mob/fools/redstone_bug.gif",
+    "sounds": [
+      "mob/sounds/Silverfish_hurt1.ogg",
+      "mob/sounds/Silverfish_hurt2.ogg",
+      "mob/sounds/Silverfish_hurt3.ogg"
+    ]
+  },
+  {
+    "name": "Spectator Villager",
+    "category": "Fool",
+    "image": "mob/fools/spectator_villager.png",
+    "sounds": [
+      "mob/sounds/Crowd_start.mp3",
+      "mob/sounds/Crowd_waiting.mp3",
+      "mob/sounds/Crowd_cheer.mp3"
+    ]
+  },
+  {
+    "name": "Spectator Witch",
+    "category": "Fool",
+    "image": "mob/fools/spectator_witch.png",
+    "sounds": [
+      "mob/sounds/Crowd_start.mp3",
+      "mob/sounds/Crowd_waiting.mp3",
+      "mob/sounds/Crowd_cheer.mp3"
+    ]
+  },
+  {
+    "name": "Smiling Creeper",
+    "category": "Fool",
+    "image": "mob/fools/smiling_creeper.png",
+    "sounds": [
+      "mob/sounds/Creeper_hurt1.ogg",
+      "mob/sounds/Creeper_hurt2.ogg",
+      "mob/sounds/Creeper_hurt3.ogg",
+      "mob/sounds/Creeper_hurt4.ogg"
+    ]
+  },
+  {
+    "name": "Toxifin Slab",
+    "category": "Fool",
+    "image": "mob/fools/toxifin_slab.gif",
+    "sounds": [
+      "mob/sounds/Toxifin_Slab_hit1.ogg",
+      "mob/sounds/Toxifin_Slab_hit2.ogg",
+      "mob/sounds/Toxifin_Slab_hit3.ogg",
+      "mob/sounds/Toxifin_Slab_hit4.ogg"
+    ]
+  },
+  {
+    "name": "Traitor",
+    "category": "Fool",
+    "image": "mob/fools/traitor.png",
+    "sounds": [
+      "mob/sounds/Pillager_hurt1.mp3",
+      "mob/sounds/Pillager_hurt2.mp3",
+      "mob/sounds/Pillager_hurt3.mp3"
+    ]
+  }
 ]
