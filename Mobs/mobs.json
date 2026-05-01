@@ -511,7 +511,7 @@
       "mob/sounds/Villager_hurt4.mp3"
     ]
   },
-        {
+    {
     "name": "Wandering Trader",
     "category": "Passive",
     "image": "mob/passive/wandering_trader.png",
@@ -520,6 +520,17 @@
       "mob/sounds/Wandering_trader_hurt2.mp3",
       "mob/sounds/Wandering_trader_hurt3.mp3",
       "mob/sounds/Wandering_trader_hurt4.mp3"
+    ]
+  },
+    {
+    "name": "Zombie Horse",
+    "category": "Passive",
+    "image": "mob/passive/zombie_horse.png",
+    "sounds": [
+      "mob/sounds/Zombie_horse_hurt1.ogg",
+      "mob/sounds/Zombie_horse_hurt2.ogg",
+      "mob/sounds/Zombie_horse_hurt3.ogg",
+      "mob/sounds/Zombie_horse_hurt4.ogg"
     ]
   }
 ]
