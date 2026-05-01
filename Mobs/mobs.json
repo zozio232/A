@@ -454,5 +454,16 @@
       "mob/sounds/Strider_hurt3.mp3",
       "mob/sounds/Strider_hurt4.mp3"
     ]
+  },
+    {
+    "name": "Sulfur Cube",
+    "category": "Passive",
+    "image": "mob/passive/sulfur_cube.png",
+    "sounds": [
+      "mob/sounds/Strider_hit1.ogg",
+      "mob/sounds/Strider_hit2.ogg",
+      "mob/sounds/Strider_hit3.ogg",
+      "mob/sounds/Strider_hit4.ogg"
+    ]
   }
 ]
