@@ -257,5 +257,33 @@
       "mob/sounds/glow_squid_hurt3.mp3",
       "mob/sounds/glow_squid_hurt4.mp3"
     ]
+  },
+    {
+    "name": "Happy Ghast",
+    "category": "Passive",
+    "image": "mob/passive/happy_ghast.gif",
+    "sounds": [
+      "mob/sounds/happy_ghast_hurt1.ogg",
+      "mob/sounds/happy_ghast_hurt2.ogg",
+      "mob/sounds/happy_ghast_hurt3.ogg",
+      "mob/sounds/happy_ghast_hurt4.ogg",
+      "mob/sounds/happy_ghast_hurt5.ogg",
+      "mob/sounds/happy_ghast_hurt6.ogg"
+
+    ]
+  },
+    {
+    "name": "Horse",
+    "category": "Passive",
+    "image": "mob/passive/happy_ghast.gif",
+    "sounds": [
+      "mob/sounds/happy_ghast_hurt1.ogg",
+      "mob/sounds/happy_ghast_hurt2.ogg",
+      "mob/sounds/happy_ghast_hurt3.ogg",
+      "mob/sounds/happy_ghast_hurt4.ogg",
+      "mob/sounds/happy_ghast_hurt5.ogg",
+      "mob/sounds/happy_ghast_hurt6.ogg"
+
+    ]
   }
 ]
