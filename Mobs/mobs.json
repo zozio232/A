@@ -392,7 +392,7 @@
 
     ]
   },
-      {
+    {
     "name": "Sheep",
     "category": "Passive",
     "image": "mob/passive/sheep.png",
@@ -400,6 +400,17 @@
       "mob/sounds/Sheep1.ogg",
       "mob/sounds/Sheep2.ogg",
       "mob/sounds/Sheep3.ogg"
+    ]
+  },
+      {
+    "name": "Sheep",
+    "category": "Passive",
+    "image": "mob/passive/sheep.png",
+    "sounds": [
+      "mob/sounds/Skeleton_Horse_hurt1.ogg",
+      "mob/sounds/Skeleton_Horse_hurt2.ogg",
+      "mob/sounds/Skeleton_Horse_hurt3.ogg",
+      "mob/sounds/Skeleton_Horse_hurt1.ogg"
     ]
   }
 ]
