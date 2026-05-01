@@ -20,6 +20,28 @@
       "mob/sounds/Armadillo_hurt5.mp3"
     ]
   },
+      {
+    "name": "Axolotl",
+    "category": "Passive",
+    "image": "mob/passive/axolotl.gif",
+    "sounds": [
+      "mob/sounds/Axolotl_hurt1.mp3",
+      "mob/sounds/Axolotl_hurt2.mp3",
+      "mob/sounds/Axolotl_hurt3.mp3",
+      "mob/sounds/Axolotl_hurt4.mp3"
+    ]
+  },
+    {
+    "name": "Bat",
+    "category": "Passive",
+    "image": "mob/passive/bat.gif",
+    "sounds": [
+      "mob/sounds/Bat_hurt1.mp3",
+      "mob/sounds/Bat_hurt2.mp3",
+      "mob/sounds/Bat_hurt3.mp3",
+      "mob/sounds/Bat_hurt4.mp3"
+    ]
+  },
     {
     "name": "Cow",
     "category": "Passive",
