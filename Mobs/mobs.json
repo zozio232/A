@@ -460,10 +460,10 @@
     "category": "Passive",
     "image": "mob/passive/sulfur_cube.png",
     "sounds": [
-      "mob/sounds/Strider_hit1.ogg",
-      "mob/sounds/Strider_hit2.ogg",
-      "mob/sounds/Strider_hit3.ogg",
-      "mob/sounds/Strider_hit4.ogg"
+      "mob/sounds/Sulfur_cube_hit1.ogg",
+      "mob/sounds/Sulfur_cube_hit2.ogg",
+      "mob/sounds/Sulfur_cube_hit3.ogg",
+      "mob/sounds/Sulfur_cube_hit4.ogg"
     ]
   }
 ]
