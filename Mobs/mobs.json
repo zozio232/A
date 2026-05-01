@@ -164,6 +164,15 @@
       "mob/sounds/Cat_hurt3.mp3"
     ]
   },
+         {
+    "name": "Chicken",
+    "category": "Passive",
+    "image": "mob/passive/chicken.png",
+    "sounds": [
+      "mob/sounds/Chicken_hurt1.ogg",
+      "mob/sounds/Chicken_hurt2.ogg"
+    ]
+  },
     {
     "name": "Cow",
     "category": "Passive",
