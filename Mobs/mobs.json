@@ -416,7 +416,7 @@
     {
     "name": "Sniffer",
     "category": "Passive",
-    "image": "mob/passive/sniffer.png",
+    "image": "mob/passive/sniffer.gif",
     "sounds": [
       "mob/sounds/Sniffer_hurt1.mp3",
       "mob/sounds/Sniffer_hurt2.mp3",
@@ -431,6 +431,28 @@
       "mob/sounds/Snow_Golem_hurt1.ogg",
       "mob/sounds/Snow_Golem_hurt2.ogg",
       "mob/sounds/Snow_Golem_hurt3.mp3"
+    ]
+  },
+      {
+    "name": "Squid",
+    "category": "Passive",
+    "image": "mob/passive/squid.gif",
+    "sounds": [
+      "mob/sounds/Squid_hurt1.ogg",
+      "mob/sounds/Squid_hurt2.ogg",
+      "mob/sounds/Squid_hurt3.ogg",
+      "mob/sounds/Squid_hurt4.mp3"
+    ]
+  },
+      {
+    "name": "Strider",
+    "category": "Passive",
+    "image": "mob/passive/strider.gif",
+    "sounds": [
+      "mob/sounds/Strider_hurt1.ogg",
+      "mob/sounds/Strider_hurt2.ogg",
+      "mob/sounds/Striderm_hurt3.mp3",
+      "mob/sounds/Strider_hurt3.mp3"
     ]
   }
 ]
