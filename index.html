@@ -261,7 +261,7 @@ footer {
     <h2>Sections principales</h2>
 
     <div class="grid">
-
+        
         <a href="recipecraft/index.html">
             <div class="card">
                 <strong>Crafts</strong>
@@ -298,11 +298,35 @@ footer {
 </div>
 <img src="steverunning.gif" class="steve-animation" alt="Steve running">
 <footer>
-    <strong>Page communautaire Minecraft</strong> — Site non officiel<br>
-    Ce site n'est pas affilié à Mojang AB.
+        <a href="https://ko-fi.com/amaicraft" target="_blank" style="color: #13c3ff; text-decoration: none;" rel="noopener noreferrer" id="Don">
+            ☕ Buy me a Coffee
+        </a> <br>
+    <strong>Page communautaire 
+        <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer" style="color:  #85b6ee; text-decoration: none; border-bottom: 1px solid transparent; background-image: linear-gradient(90deg, #ffffff 0%, #a8f0a5 100%); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%;">Minecraft</a></strong> — Site non officiel<br>
 </footer>
 </body>
 <script>
+    window.onload = function() {
+        const Coff = document.getElementById('Don');
+        const text = Coff.innerText;
+        Coff.innerHTML = ''; // On vide le titre pour le reconstruire
+
+        for (let char of text) {
+            const span = document.createElement('span');
+            span.innerText = char;
+            
+            // Génération d'une couleur pastel
+            // On reste sur des valeurs hautes (entre 127 et 255) pour garder de la clarté
+            const hue = Math.floor(Math.random() * 360);
+            const color = `hsl(${hue}, 100%, 80%)`;
+            span.style.color = color;
+            span.style.textDecoration = 'underline';
+            span.style.textDecorationColor = color;
+            span.style.textDecorationThickness = '2px';
+            
+            Coff.appendChild(span);
+        }
+    };
     const steve = document.querySelector('.steve-animation');
 
     steve.addEventListener('click', () => {
