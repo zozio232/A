@@ -12,6 +12,57 @@
             font-weight: 400;
             src: local('Minecraftia'), url('../Minecraftia.woff') format('woff');
         }
+        /* ---  STEVE --- */
+        .steve-animation {
+            position: fixed;
+            bottom: 70px;
+            left: -100px;
+            width: 100px;
+            z-index: 1000;
+
+            pointer-events: auto; 
+            cursor: pointer;
+            animation: walk-around 10s linear infinite;
+            transition: transform 0.1s;
+
+            user-select: none;
+            -webkit-user-drag: none;
+            touch-action: manipulation;
+        }
+
+
+        @keyframes jump-animation {
+            0% { bottom: 70px; animation-timing-function: ease-out; }
+            50% { bottom: 250px; animation-timing-function: ease-in; } /* Hauteur du saut */
+            100% { bottom: 70px; }
+        }
+
+
+        .jumping {
+            animation: walk-around 10s linear infinite, jump-animation 0.8s ease-in-out !important;
+        }
+
+        @keyframes walk-around {
+            0% {
+                left: -100px;
+                transform: scaleX(-1); /* Regarde vers la droite (si de base il regarde à gauche) */
+            }
+            45% {
+                transform: scaleX(-1); /* Continue de regarder à droite */
+            }
+            50% {
+                left: calc(100% - 100px);
+                /*transform: scaleX(1); Se retourne vers la gauche */
+            }
+            95% {
+                /*transform: scaleX(1);  Continue de regarder à gauche */
+            }
+            100% {
+                left: -100px;
+                transform: scaleX(-1);  /*Se retourne pour recommencer */
+            }
+        }
+
         footer {
             position: fixed;
             bottom: 0;
@@ -240,7 +291,7 @@
         <button class="reset-btn" onclick="resetGame()">RESET DATA</button>
     </div>
 </main>
-
+<img src="Steve_Chair.gif" class="steve-animation" alt="Steve running">
 <footer>
     <a href="https://ko-fi.com/amaicraft" target="_blank" style="color: #13c3ff; text-decoration: none;" rel="noopener noreferrer" id="Don">
         ☕ Buy me a Coffee
@@ -255,11 +306,11 @@
     const blockData = [
         { id: "grass", name: "Grass Block", hits: 3, img: "Blocks/Grass_Block.png" },
         { id: "dirt", name: "Dirt", hits: 3, img: "Blocks/Dirt.png" },
-        { id: "stone", name: "Stone", hits: 6, img: "Blocks/Stone.png" },
-        { id: "oak", name: "Oak Log", hits: 5, img: "Blocks/Oak_Log.png" },
+        { id: "stone", name: "Stone", hits: 6, img: "../recipecraft/assets/items/stone.png" },
+        { id: "oak", name: "Oak Log", hits: 5, img: "../recipecraft/assets/items/oak_log.png" },
         { id: "coal", name: "Coal", hits: 8, img: "Blocks/Coal_Ore.png" },
         { id: "iron", name: "Iron", hits: 10, img: "Blocks/Iron_Ore.png" },
-        { id: "diamond", name: "Diamond", hits: 15, img: "Blocks/Diamond_Ore.png" }
+        { id: "diamond", name: "Diamond", hits: 15, img: "../recipecraft/assets/items/diamond_ore.png" }
     ];
 
     // 2. État du jeu
@@ -345,6 +396,28 @@
 
     // Lancement
     init();
+
+
+
+
+
+
+
+
+    // Steve Saute
+    const steve = document.querySelector('.steve-animation');
+
+    steve.addEventListener('click', () => {
+        // Si Steve n'est pas déjà en train de sauter
+        if (!steve.classList.contains('jumping')) {
+            steve.classList.add('jumping');
+
+            // On retire la classe après 800ms (durée de l'animation)
+            setTimeout(() => {
+                steve.classList.remove('jumping');
+            }, 800);
+        }
+    });
 </script>
 
 </body>
