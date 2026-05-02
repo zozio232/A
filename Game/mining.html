@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAICRAFT - Blocks Collection</title>
+    <style>
+        /* === STYLES DE BASE (CONSERVÉS) === */
+        @font-face {
+            font-family: 'Minecraftia';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Minecraftia'), url('../Minecraftia.woff') format('woff');
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            background-color: #1a1a1a;
+            color: #aaaaaa;
+            border-top: 4px solid #000;
+            z-index: 2000;
+        }
+
+        :root {
+            --mc-gui-panel: #c6c6c6;
+            --mc-gui-button: #7e7e7e;
+            --mc-gui-shadow: #555555;
+            --mc-gui-light: #ffffff;
+            --mc-text-shadow: #3f3f3f;
+        }
+
+        body {
+            font-family: 'Minecraftia', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background-image: url('background.jpg'); 
+            background-size: cover; /* Remplit tout l'écran */
+            background-position: center; /* Centre l'image */
+            background-repeat: no-repeat; /* Évite la répétition */
+            background-attachment: fixed;
+            color: white;
+            user-select: none;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 4px solid #000;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 70px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            text-shadow: 3px 3px 0px #3f3f3f;
+            letter-spacing: 2px;
+        }
+
+        header img {
+            position: absolute;
+            right: 0; top: 0; bottom: 0;
+            height: 100%; width: auto;
+        }
+
+        .nav {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav a {
+            background: #555;
+            border: 2px solid #000;
+            border-top-color: #ababab;
+            border-left-color: #ababab;
+            padding: 8px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            background: #8b8b8b;
+            border-top-color: #dbdbdb;
+            border-left-color: #dbdbdb;
+        }
+
+        /* === ZONE DE JEU DYNAMIQUE === */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin-bottom: 120px;
+        }
+
+        .mc-panel {
+            background-color: var(--mc-gui-panel);
+            border: 4px solid var(--mc-gui-light);
+            border-bottom-color: var(--mc-gui-shadow);
+            border-right-color: var(--mc-gui-shadow);
+            padding: 20px;
+            color: #333;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.4);
+        }
+
+        /* Le Bloc en Image */
+        #block-sprite {
+            width: 128px;
+            height: 128px;
+            margin: 20px auto;
+            cursor: pointer;
+            display: block;
+            image-rendering: pixelated; /* Pour garder l'aspect Minecraft */
+            transition: transform 0.05s;
+        }
+
+        #block-sprite:active {
+            transform: scale(0.9);
+        }
+
+        /* Barre de progression (Craquelures) */
+        .progress-container {
+            width: 80%;
+            height: 10px;
+            background: #333;
+            margin: 10px auto;
+            border: 2px solid #000;
+        }
+
+        #progress-bar {
+            width: 0%;
+            height: 100%;
+            background: #4caf50;
+        }
+
+        /* Inventaire / Hotbar */
+        .hotbar {
+            display: flex;
+            gap: 5px;
+            margin-top: 20px;
+            background: #8b8b8b;
+            padding: 5px;
+            border: 3px solid #373737;
+            justify-content: center;
+        }
+
+        .slot {
+            width: 50px;
+            height: 50px;
+            background: #8b8b8b;
+            border: 3px solid #373737;
+            border-bottom-color: #fff;
+            border-right-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slot img {
+            width: 32px;
+            height: 32px;
+            image-rendering: pixelated;
+        }
+
+        .slot .count {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            color: white;
+            font-size: 14px;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        .reset-btn {
+            margin-top: 15px;
+            background: #aa0000;
+            color: white;
+            border: 2px solid #000;
+            padding: 5px;
+            cursor: pointer;
+            font-family: 'Minecraftia';
+            font-size: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            background-color: #1a1a1a;
+            color: #aaaaaa;
+            border-top: 4px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AMAICRAFT</h1>
+    <img src="../parrotparty.gif" alt="Parrot Party">
+</header>
+
+<div class="nav">
+    <a href="../index.html">ACCUEIL</a>
+    <a href="https://minecraft.wiki" target="_blank" rel="noopener noreferrer">WIKI</a>
+    <a href="https://www.minecraft.net/fr-fr/minecraft-tips-for-beginners" target="_blank" rel="noopener noreferrer">GUIDES</a>
+</div>
+
+<main>
+    <div class="mc-panel">
+        <h2 id="block-name">Loading...</h2>
+        
+        <img id="block-sprite" src="" alt="Bloc" onclick="handleMine()">
+        
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <p id="status">Click to collect!</p>
+
+        <div class="hotbar" id="inventory-ui">
+            </div>
+
+        <button class="reset-btn" onclick="resetGame()">RESET DATA</button>
+    </div>
+</main>
+
+<footer>
+    <a href="https://ko-fi.com/amaicraft" target="_blank" style="color: #13c3ff; text-decoration: none;" rel="noopener noreferrer" id="Don">
+        ☕ Buy me a Coffee
+    </a> <br>
+    <strong>Page communautaire 
+        <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer" style="color: #85b6ee; text-decoration: none;">Minecraft</a>
+    </strong> — Site non officiel<br>
+</footer>
+
+<script>
+    // 1. Définition des blocs via JSON
+    const blockData = [
+        { id: "grass", name: "Grass Block", hits: 3, img: "Blocks/Grass_Block.png" },
+        { id: "dirt", name: "Dirt", hits: 3, img: "Blocks/Dirt.png" },
+        { id: "stone", name: "Stone", hits: 6, img: "Blocks/Stone.png" },
+        { id: "oak", name: "Oak Log", hits: 5, img: "Blocks/Oak_Log.png" },
+        { id: "coal", name: "Coal", hits: 8, img: "Blocks/Coal_Ore.png" },
+        { id: "iron", name: "Iron", hits: 10, img: "Blocks/Iron_Ore.png" },
+        { id: "diamond", name: "Diamond", hits: 15, img: "Blocks/Diamond_Ore.png" }
+    ];
+
+    // 2. État du jeu
+    let currentBlockIndex = 0;
+    let currentHits = 0;
+    let inventory = JSON.parse(localStorage.getItem('amaicraft_inv')) || {};
+
+    // 3. Initialisation
+    function init() {
+        spawnRandomBlock();
+        updateInventoryUI();
+    }
+
+    function spawnRandomBlock() {
+        currentBlockIndex = Math.floor(Math.random() * blockData.length);
+        currentHits = 0;
+        const block = blockData[currentBlockIndex];
+        
+        document.getElementById('block-name').innerText = block.name;
+        document.getElementById('block-sprite').src = block.img;
+        updateProgressBar();
+    }
+
+    // 4. Logique de Minage
+    function handleMine() {
+        const block = blockData[currentBlockIndex];
+        currentHits++;
+        
+        updateProgressBar();
+
+        if (currentHits >= block.hits) {
+            collectBlock(block.id);
+            spawnRandomBlock();
+        }
+    }
+
+    function updateProgressBar() {
+        const block = blockData[currentBlockIndex];
+        const percent = (currentHits / block.hits) * 100;
+        document.getElementById('progress-bar').style.width = percent + "%";
+    }
+
+    // 5. Sauvegarde & Inventaire
+    function collectBlock(id) {
+        inventory[id] = (inventory[id] || 0) + 1;
+        localStorage.setItem('amaicraft_inv', JSON.stringify(inventory));
+        updateInventoryUI();
+    }
+
+    function updateInventoryUI() {
+        const ui = document.getElementById('inventory-ui');
+        ui.innerHTML = ""; // Clear
+        
+        // On affiche les 5 premiers types collectés
+        Object.keys(inventory).forEach(id => {
+            const data = blockData.find(b => b.id === id);
+            if (data && inventory[id] > 0) {
+                const slot = document.createElement('div');
+                slot.className = "slot";
+                slot.innerHTML = `
+                    <img src="${data.img}">
+                    <span class="count">${inventory[id]}</span>
+                `;
+                ui.appendChild(slot);
+            }
+        });
+
+        // Remplir les slots vides pour le style
+        while(ui.children.length < 5) {
+            const empty = document.createElement('div');
+            empty.className = "slot";
+            ui.appendChild(empty);
+        }
+    }
+
+    function resetGame() {
+        if(confirm("Delete all your progress?")) {
+            inventory = {};
+            localStorage.removeItem('amaicraft_inv');
+            updateInventoryUI();
+        }
+    }
+
+    // Lancement
+    init();
+</script>
+
+</body>
+</html>
